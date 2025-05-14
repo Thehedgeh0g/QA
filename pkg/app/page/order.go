@@ -80,7 +80,7 @@ func (o *Order) FillFullOrderForm(formData testdata.OrderData) error {
 	return o.submit()
 }
 
-func (o *Order) IsOrderMadeSuccessful() (bool, error) {
+func (o *Order) IsOrderSuccessful() (bool, error) {
 	elem, err := o.FindElement(selenium.ByXPATH, ErrorTitle)
 	if err != nil {
 		return false, err
@@ -89,7 +89,7 @@ func (o *Order) IsOrderMadeSuccessful() (bool, error) {
 	return elem.IsDisplayed()
 }
 
-func (o *Order) IsOrderMadeFailed() (bool, error) {
+func (o *Order) IsOrderFailed() (bool, error) {
 	elem, err := o.FindElement(selenium.ByCSSSelector, ErrorMessage)
 	if err != nil {
 		return false, err
