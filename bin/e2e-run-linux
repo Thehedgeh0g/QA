@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e  # Остановить выполнение при ошибке
+
+echo "🚀 Поднимаем docker-compose..."
+docker-compose --file data/docker/docker-compose.yaml up -d
+
+echo "⏳ Ожидание старта контейнеров..."
+sleep 5
+
+echo "🔧 Компиляция тестов..."
+go test -c ./cmd -o ./bin/test
+
+echo "✅ Запуск тестов..."
+./bin/test -test.v
