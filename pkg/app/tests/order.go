@@ -8,14 +8,14 @@ import (
 	"github.com/tebeka/selenium"
 
 	"e2etests/data/testdata"
-	"e2etests/pkg/utils"
-	"e2etests/pkg/utils/page"
+	"e2etests/pkg/app/model"
+	"e2etests/pkg/app/page"
 )
 
-func OrderTestGroup() utils.TestGroup {
-	return utils.TestGroup{
+func OrderTestGroup() model.TestGroup {
+	return model.TestGroup{
 		Name: "OrderTest",
-		Tests: []utils.TestCase{
+		Tests: []model.TestCase{
 			{
 				Name: "TestMadeOrderLoggedSuccessful",
 				Test: TestMadeOrderLoggedSuccessful,

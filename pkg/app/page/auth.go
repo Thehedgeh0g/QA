@@ -3,7 +3,7 @@ package page
 import (
 	"github.com/tebeka/selenium"
 
-	"e2etests/pkg/utils"
+	"e2etests/pkg/infrastructure"
 )
 
 const (
@@ -15,7 +15,7 @@ const (
 )
 
 type Auth struct {
-	utils.SeleniumAdapter
+	infrastructure.SeleniumAdapter
 }
 
 func (a *Auth) Login(login, password string) error {

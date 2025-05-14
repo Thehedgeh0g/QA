@@ -1,9 +1,11 @@
 package page
 
 import (
-	"e2etests/pkg/utils"
 	"fmt"
+
 	"github.com/tebeka/selenium"
+
+	"e2etests/pkg/infrastructure"
 )
 
 const (
@@ -16,7 +18,7 @@ const (
 )
 
 type Item struct {
-	utils.SeleniumAdapter
+	infrastructure.SeleniumAdapter
 }
 
 func (p *Item) AddToCart(id string) error {

@@ -5,7 +5,7 @@ import (
 
 	"github.com/tebeka/selenium"
 
-	"e2etests/pkg/utils"
+	"e2etests/pkg/infrastructure"
 )
 
 const (
@@ -14,7 +14,7 @@ const (
 )
 
 type Catalog struct {
-	utils.SeleniumAdapter
+	infrastructure.SeleniumAdapter
 }
 
 func (c *Catalog) SearchItem(text string) error {

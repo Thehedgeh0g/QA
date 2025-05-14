@@ -1,20 +1,20 @@
 package tests
 
 import (
-	"e2etests/pkg/utils"
+	"e2etests/pkg/app/page"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/tebeka/selenium"
 
 	"e2etests/data/testdata"
-	"e2etests/pkg/utils/page"
+	"e2etests/pkg/app/model"
 )
 
-func AddToCartTestGroup() utils.TestGroup {
-	return utils.TestGroup{
+func AddToCartTestGroup() model.TestGroup {
+	return model.TestGroup{
 		Name: "AddToCartTest",
-		Tests: []utils.TestCase{
+		Tests: []model.TestCase{
 			{
 				Name: "TestAddToCartInMainPage",
 				Test: TestAddToCartInMainPage,

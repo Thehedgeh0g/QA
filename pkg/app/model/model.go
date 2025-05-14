@@ -1,7 +1,8 @@
-package utils
+package model
 
 import (
 	"github.com/tebeka/selenium"
+
 	"testing"
 )
 

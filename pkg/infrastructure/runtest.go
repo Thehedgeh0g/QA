@@ -1,7 +1,6 @@
-package utils
+package infrastructure
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -10,7 +9,7 @@ import (
 
 func RunTestForBrowser(t *testing.T, testName, browserName string, testFunc func(*testing.T, selenium.WebDriver)) {
 	t.Helper()
-	t.Run(fmt.Sprintf("%s-%s", testName, browserName), func(t *testing.T) {
+	t.Run(testName, func(t *testing.T) {
 		caps := selenium.Capabilities{
 			"browserName": browserName,
 		}

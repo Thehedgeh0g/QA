@@ -6,7 +6,7 @@ import (
 	"github.com/tebeka/selenium"
 
 	"e2etests/data/testdata"
-	"e2etests/pkg/utils"
+	"e2etests/pkg/infrastructure"
 )
 
 const (
@@ -26,7 +26,7 @@ const (
 )
 
 type Order struct {
-	utils.SeleniumAdapter
+	infrastructure.SeleniumAdapter
 }
 
 func (o *Order) AddToCart() error {

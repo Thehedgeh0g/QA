@@ -1,18 +1,20 @@
 package tests
 
 import (
-	"e2etests/data/testdata"
-	"e2etests/pkg/utils"
-	"e2etests/pkg/utils/page"
+	"e2etests/pkg/app/page"
+	"testing"
+
 	"github.com/stretchr/testify/assert"
 	"github.com/tebeka/selenium"
-	"testing"
+
+	"e2etests/data/testdata"
+	"e2etests/pkg/app/model"
 )
 
-func SearchTestGroup() utils.TestGroup {
-	return utils.TestGroup{
+func SearchTestGroup() model.TestGroup {
+	return model.TestGroup{
 		Name: "SearchTest",
-		Tests: []utils.TestCase{
+		Tests: []model.TestCase{
 			{
 				Name: "SearchInMainPage",
 				Test: SearchInMainPage,
